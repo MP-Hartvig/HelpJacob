@@ -6,5 +6,6 @@ using System.Threading.Tasks;
 
 namespace HelpJacob.Enum
 {
+    // Not needed
     public enum MessageCarrier { Smtp, VMessage }
 }

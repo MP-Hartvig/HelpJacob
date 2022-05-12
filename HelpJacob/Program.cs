@@ -19,15 +19,16 @@ namespace HelpJacob
 
             bool isHTML = true;
 
-            MessageCarrier smtp = MessageCarrier.Smtp;
-            MessageCarrier vMessage = MessageCarrier.VMessage;
-
             Message message = new Message(to, from, body, subject, cc);
+
+            //// These have no use
+            //MessageCarrier smtp = MessageCarrier.Smtp;
+            //MessageCarrier vMessage = MessageCarrier.VMessage;
 
             message.ConvertMessageToHTML(message, isHTML);
 
-            message.SendSMTP(smtp, message);
-            message.SendVMessage(vMessage, message);
+            message.SendSMTP(message);
+            message.SendVMessage(message);
         }
     }
 }

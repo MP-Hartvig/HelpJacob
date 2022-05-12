@@ -37,12 +37,12 @@ namespace HelpJacob
             return "" + plainText + "";
         }
 
-        public void SendSMTP(MessageCarrier smtp, Message m)
+        public void SendSMTP(Message m)
         {
             //her implementeres alt koden til at sende via Smtp
         }
 
-        public void SendVMessage(MessageCarrier vMessage, Message m)
+        public void SendVMessage(Message m)
         {
             //her implementeres alt koden til at sende via VMessage
         }
