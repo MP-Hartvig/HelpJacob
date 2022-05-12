@@ -16,7 +16,7 @@ namespace HelpJacob
             string from = "Fra@Test.com";
             string body = "This is the body";
             string subject = "Test";
-            cc.Add("");
+            cc.Add("CC1@Test.com");
 
             CreateMessage message = new CreateMessage(to, from, body, subject, cc);
 
