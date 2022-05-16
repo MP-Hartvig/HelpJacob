@@ -13,19 +13,17 @@ namespace HelpJacob
             string subject = "Test";
             cc.Add("CC1@Test.com");
 
-            CreateMessage message = new CreateMessage(to, from, body, subject, cc);
+            Message message = new Message(to, from, body, subject, cc);
 
             bool isHTML = true;
             ConvertMessage convert = new ConvertMessage();
             convert.ConvertMessageToHTML(message, isHTML);
 
             SendSMTP sendSMTP = new SendSMTP();
-            sendSMTP.SendSingleSMTP(message);
-            sendSMTP.SendMultipleSMTP(cc, message);
+            sendSMTP.SendSMTPMessages(message);
 
             SendVMessage sendVMessage = new SendVMessage();
-            sendVMessage.SendSingleVMessage(message);
-            sendVMessage.SendMultipleVMessage(cc, message);
+            sendVMessage.SendVMessages(message);
         }
     }
 }

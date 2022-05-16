@@ -3,12 +3,12 @@
 namespace HelpJacob
 {
     // This class creates an email message
-    public class CreateMessage
+    public class Message
     {
         string to, from, body, subject;
         List<string> cc;
 
-        public CreateMessage(string to, string from, string body, string subject, List<string> cc)
+        public Message(string to, string from, string body, string subject, List<string> cc)
         {
             this.to = to;
             this.from = from;

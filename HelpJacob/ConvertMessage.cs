@@ -3,7 +3,7 @@
     // This class converts a message body to html
     public class ConvertMessage
     {
-        public void ConvertMessageToHTML(CreateMessage m, bool isHTML)
+        public void ConvertMessageToHTML(Message m, bool isHTML)
         {
             if (isHTML)
                 m.Body = ConvertBodyToHTML(m.Body);
