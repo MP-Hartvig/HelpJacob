@@ -15,9 +15,8 @@ namespace HelpJacob
 
             Message message = new Message(to, from, body, subject, cc);
 
-            bool isHTML = true;
             ConvertMessage convert = new ConvertMessage();
-            convert.ConvertMessageToHTML(message, isHTML);
+            convert.ConvertMessageToHTML(message);
 
             SendSMTP sendSMTP = new SendSMTP();
             sendSMTP.SendSMTPMessages(message);
